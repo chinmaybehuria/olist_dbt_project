@@ -6,16 +6,16 @@ sources:
     schema: RAW
     freshness:
       warn_after:
-        count: 12
-        period: hour
+        count: 2600
+        period: day
       error_after:
-        count: 24
-        period: hour
+        count: 2700
+        period: day
     tables:
       - name: customers
         description: Customer master data with location information
         identifier: customers
-        loaded_at_field: customer_id
+        #loaded_at_field: customer_id
         columns:
           - name: customer_id
             description: Unique customer identifier
@@ -31,7 +31,7 @@ sources:
       - name: order_items
         description: Line items for each order with pricing
         identifier: order_items
-        loaded_at_field: order_id
+        #loaded_at_field: order_id
         columns:
           - name: order_id
             description: Order this item belongs to
