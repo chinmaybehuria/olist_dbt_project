@@ -4,3 +4,4 @@ SELECT
     price,
     freight_value
 FROM {{ source('olist_raw', 'order_items') }}
+--test
